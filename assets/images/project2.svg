@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" rx="12" fill="#fff7ee"/>
+  <g transform="translate(40,70)" fill="#ff8a00" opacity="0.95">
+    <rect x="0" y="0" width="160" height="120" rx="8"/>
+    <rect x="180" y="0" width="360" height="36" rx="8"/>
+    <rect x="180" y="56" width="420" height="36" rx="8"/>
+  </g>
+  <text x="48" y="40" fill="#6b3b00" font-size="20">Student Analytics</text>
+</svg>

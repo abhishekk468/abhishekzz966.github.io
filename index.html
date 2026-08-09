@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2254ff">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <title>Abhishek Kumar | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -12,6 +14,7 @@
     <div class="card">
         <header>
             <div class="hero">
+                <img src="assets/images/profile.jpg" alt="Abhishek" class="profile-photo">
                 <div class="avatar">AK</div>
                 <div>
                     <h1>Abhishek Kumar</h1>
@@ -26,32 +29,39 @@
                 </div>
             </div>
 
-                <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
-                    <div class="links">
+                <div style="display:flex;align-items:center;gap:8px;margin-left:auto">
+                    <nav class="nav">
+                        <a href="index.html">Home</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="resume.html">Resume</a>
+                    </nav>
+                    <div class="links" style="margin-left:10px">
                         <a href="https://linkedin.com/in/abhishek-kumar-871405334" target="_blank">LinkedIn</a>
                         <a href="https://github.com/abhishekzz966" target="_blank">GitHub</a>
                     </div>
                     <a href="resume.pdf" class="btn" id="resumeBtn" download>Resume</a>
                     <button class="btn secondary" id="printResume">Print</button>
-                    <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
-                    <button class="theme-toggle" id="copyEmail" data-email="abhishekzz966@gmail.com">Copy Email</button>
+                    <button class="theme-toggle" id="themeToggle">Toggle</button>
+                    <button class="theme-toggle" id="copyEmail" data-email="abhishekzz966@gmail.com">Copy</button>
                 </div>
         </header>
     </div>
 
     <div class="grid">
         <main class="card">
-            <section>
+            <section id="summary">
                 <h2>Professional Summary</h2>
                 <p>
                     B.Tech CS student with practical ML and multimodal AI project experience. Built an AI Image–Text Trust Scoring System using CLIP, PyTorch, and MLP fusion. Placed 3rd nationally at CODE ESCAPE and awarded at TATVAS Hackathon. Patent published by Government of India (Jul 2025).
                 </p>
             </section>
 
-            <section style="margin-top:16px">
+            <section id="projects" style="margin-top:4px">
                 <h2>Projects</h2>
 
-                <div class="project-card" style="margin-bottom:12px">
+                <div class="project-card" style="margin-bottom:12px" tabindex="0">
                     <h3 style="margin:0">AI Image–Text Trust Scoring System</h3>
                     <div style="color:var(--muted);font-size:13px;margin:6px 0"><strong>Da Vinci Hackathon</strong> • 2024–2025</div>
                     <ul>
@@ -61,7 +71,7 @@
                     </ul>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" tabindex="0">
                     <h3 style="margin:0">Student Result & Analytics System</h3>
                     <div style="color:var(--muted);font-size:13px;margin:6px 0"><strong>Academic Project</strong> • 2024</div>
                     <ul>
@@ -71,7 +81,7 @@
                 </div>
             </section>
 
-            <section style="margin-top:16px">
+            <section id="achievements" style="margin-top:8px">
                 <h2>Achievements</h2>
                 <ul>
                     <li>Patent published — Tap‑Mounted Utensil Drying Apparatus (Jul 2025).</li>
@@ -79,7 +89,7 @@
                 </ul>
             </section>
 
-            <section style="margin-top:16px">
+            <section id="certifications" style="margin-top:16px">
                 <h2>Certifications</h2>
                 <ul>
                     <li>Python in Data Analytics — <a href="https://coursera.org/share/a790dc77920c84d7bf155f4d2d6ac77f" target="_blank">Certificate</a></li>
@@ -92,19 +102,19 @@
             <div class="card">
                 <section class="skills">
                     <h2>Technical Skills</h2>
-                    <div class="badges" style="margin-top:10px">
-                        <span class="badge">PyTorch</span>
-                        <span class="badge">CLIP</span>
-                        <span class="badge">Python</span>
-                        <span class="badge">Pandas</span>
-                        <span class="badge">NumPy</span>
-                        <span class="badge">MySQL</span>
-                        <span class="badge">FastAPI</span>
-                        <span class="badge">Gradio</span>
+                    <div style="margin-top:10px">
+                        <div class="skill-row"><div class="label"><span>Python</span><span>92%</span></div><div class="bar"><div class="fill" data-value="92"></div></div></div>
+                        <div class="skill-row"><div class="label"><span>PyTorch</span><span>85%</span></div><div class="bar"><div class="fill" data-value="85"></div></div></div>
+                        <div class="skill-row"><div class="label"><span>CLIP / Multimodal</span><span>78%</span></div><div class="bar"><div class="fill" data-value="78"></div></div></div>
+                        <div class="skill-row"><div class="label"><span>Pandas</span><span>88%</span></div><div class="bar"><div class="fill" data-value="88"></div></div></div>
+                        <div class="skill-row"><div class="label"><span>NumPy</span><span>90%</span></div><div class="bar"><div class="fill" data-value="90"></div></div></div>
+                        <div class="skill-row"><div class="label"><span>MySQL</span><span>76%</span></div><div class="bar"><div class="fill" data-value="76"></div></div></div>
+                        <div class="skill-row"><div class="label"><span>FastAPI</span><span>72%</span></div><div class="bar"><div class="fill" data-value="72"></div></div></div>
+                        <div class="skill-row"><div class="label"><span>Gradio</span><span>70%</span></div><div class="bar"><div class="fill" data-value="70"></div></div></div>
                     </div>
                 </section>
 
-                <section style="margin-top:16px">
+                <section style="margin-top:16px" id="education">
                     <h2>Education</h2>
                     <div style="color:var(--muted);font-size:14px"><strong>B.Tech — Computer Science & Engineering</strong></div>
                     <div style="font-size:13px;margin-top:6px">Chandigarh University | 2024 – 2028</div>
@@ -113,7 +123,7 @@
             </div>
 
             <div class="card" style="margin-top:12px">
-                <h2>Extracurricular</h2>
+                <h2 id="extracurricular">Extracurricular</h2>
                 <ul>
                     <li>Led Young Orators Club; trained public speaking.</li>
                     <li>Competed in national hackathons and quizzes.</li>

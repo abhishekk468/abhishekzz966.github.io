@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" rx="12" fill="#eef4ff"/>
+  <g transform="translate(40,70)" fill="#2254ff" opacity="0.9">
+    <rect x="0" y="0" width="200" height="120" rx="8"/>
+    <rect x="220" y="0" width="200" height="64" rx="8"/>
+    <rect x="220" y="84" width="420" height="36" rx="8"/>
+  </g>
+  <text x="48" y="40" fill="#0b2a66" font-size="20">AI Image–Text Trust</text>
+</svg>

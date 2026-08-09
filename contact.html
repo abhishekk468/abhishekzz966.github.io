@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Abhishek Kumar</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="card" style="margin-top:12px">
+    <header style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="avatar">AK</div>
+        <div>
+          <h1>Contact</h1>
+          <div class="sub">Let's collaborate</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+  </div>
+
+  <main class="card">
+    <section>
+      <h2>Contact Me</h2>
+      <p class="text-muted">Send a short message — I usually reply within 48 hours.</p>
+
+      <form action="https://formspree.io/f/mgeqjzbl" method="POST" style="display:flex;flex-direction:column;gap:10px;max-width:640px">
+        <img src="assets/images/profile.jpg" alt="profile" width="96" style="border-radius:8px;box-shadow:0 8px 30px rgba(18,25,40,0.06);object-fit:cover;margin-bottom:6px">
+        <input name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(12,20,40,0.06)">
+        <input name="email" placeholder="Your email" type="email" required style="padding:10px;border-radius:8px;border:1px solid rgba(12,20,40,0.06)">
+        <textarea name="message" placeholder="Message" rows="6" required style="padding:10px;border-radius:8px;border:1px solid rgba(12,20,40,0.06)"></textarea>
+        <div style="display:flex;gap:8px">
+          <button class="btn" type="submit">Send</button>
+          <button class="btn secondary" type="reset">Reset</button>
+        </div>
+      </form>
+
+    </section>
+  </main>
+
+  <footer class="card">Back to <a href="index.html">home</a></footer>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
