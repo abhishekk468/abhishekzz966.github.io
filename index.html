@@ -5,100 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Kumar | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --bg1: #f6f8ff;
-            --card: #ffffff;
-            --muted: #5b6b7a;
-            --accent: #2254ff;
-            --glass: rgba(255,255,255,0.6);
-        }
-
-        body{
-            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-            background: linear-gradient(180deg,#eef2ff 0%, #f8fbff 50%);
-            margin:0;
-            padding:40px 20px;
-            color:#0f1724;
-            -webkit-font-smoothing:antialiased;
-        }
-
-        .wrap{
-            max-width:1000px;
-            margin:0 auto;
-            display:block;
-        }
-
-        .card{
-            background: var(--card);
-            border-radius:14px;
-            padding:28px;
-            box-shadow: 0 8px 30px rgba(18,25,40,0.06);
-            margin-bottom:20px;
-        }
-
-        header{
-            display:flex;
-            gap:20px;
-            align-items:center;
-            justify-content:space-between;
-            flex-wrap:wrap;
-        }
-
-        .hero{
-            display:flex;
-            gap:20px;
-            align-items:center;
-        }
-
-        .avatar{
-            width:88px;height:88px;border-radius:50%;
-            background:linear-gradient(135deg,var(--accent),#00b7ff);
-            display:flex;align-items:center;justify-content:center;
-            color:white;font-weight:800;font-size:28px;flex:0 0 88px;
-            box-shadow:0 6px 18px rgba(34,84,255,0.18);
-        }
-
-        h1{margin:0;font-size:24px;letter-spacing:0.6px}
-        .sub{color:var(--muted);font-size:14px;margin-top:6px}
-
-        .links a{color:var(--accent);text-decoration:none;margin-right:12px}
-
-        .meta{display:flex;gap:12px;align-items:center;font-size:14px;color:var(--muted);flex-wrap:wrap}
-
-        h2{margin:0 0 12px 0;font-size:18px}
-
-        .grid{
-            display:grid;
-            grid-template-columns:1fr 320px;
-            gap:20px;
-        }
-
-        .skills .badges{display:flex;flex-wrap:wrap;gap:8px}
-        .badge{background:#f1f6ff;color:#0b2a66;padding:6px 10px;border-radius:999px;font-size:13px}
-
-        .project-card{border-radius:10px;padding:14px;background:linear-gradient(180deg, rgba(34,84,255,0.03), transparent);border:1px solid rgba(34,84,255,0.06);transition:transform .22s ease, box-shadow .22s ease}
-        .project-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(16,24,40,0.08)}
-
-        ul{margin:8px 0 0 18px}
-
-        footer{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
-
-        .theme-toggle{background:transparent;border:1px solid rgba(12,20,40,0.06);padding:8px 12px;border-radius:999px;cursor:pointer}
-
-        /* responsive */
-        @media (max-width:900px){
-            .grid{grid-template-columns:1fr}
-            .meta{width:100%}
-        }
-
-        /* dark theme */
-        body.dark{background:linear-gradient(180deg,#0b1220 0%, #071025 60%);color:#d7e6ff}
-        body.dark .card{background:rgba(6,10,21,0.6);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
-        body.dark .badge{background:#0f1b3a;color:#9fc7ff}
-        body.dark .avatar{box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-        body.dark a{color:#8fb6ff}
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <div class="wrap">
@@ -108,7 +15,7 @@
                 <div class="avatar">AK</div>
                 <div>
                     <h1>Abhishek Kumar</h1>
-                    <div class="sub">B.Tech CSE (2024–28) — Chandigarh University</div>
+                    <div class="sub" id="subtitle" data-text="B.Tech CSE (2024–28) — Chandigarh University">B.Tech CSE (2024–28) — Chandigarh University</div>
                     <div class="meta" style="margin-top:10px">
                         <div>Ludhiana, Punjab</div>
                         <div>•</div>
@@ -119,13 +26,16 @@
                 </div>
             </div>
 
-            <div style="display:flex;align-items:center;gap:12px;margin-left:auto">
-                <div class="links">
-                    <a href="https://linkedin.com/in/abhishek-kumar-871405334" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/abhishekzz966" target="_blank">GitHub</a>
+                <div style="display:flex;align-items:center;gap:10px;margin-left:auto">
+                    <div class="links">
+                        <a href="https://linkedin.com/in/abhishek-kumar-871405334" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/abhishekzz966" target="_blank">GitHub</a>
+                    </div>
+                    <a href="resume.pdf" class="btn" id="resumeBtn" download>Resume</a>
+                    <button class="btn secondary" id="printResume">Print</button>
+                    <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+                    <button class="theme-toggle" id="copyEmail" data-email="abhishekzz966@gmail.com">Copy Email</button>
                 </div>
-                <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
-            </div>
         </header>
     </div>
 
@@ -218,14 +128,6 @@
     </footer>
 </div>
 
-<script>
-    const btn = document.getElementById('themeToggle');
-    const isDark = localStorage.getItem('theme') === 'dark';
-    if(isDark) document.body.classList.add('dark');
-    btn.addEventListener('click', ()=>{
-        document.body.classList.toggle('dark');
-        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-    });
-</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
