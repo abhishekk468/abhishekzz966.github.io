@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Kumar | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg1: #f6f8ff;
+            --card: #ffffff;
+            --muted: #5b6b7a;
+            --accent: #2254ff;
+            --glass: rgba(255,255,255,0.6);
+        }
+
+        body{
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            background: linear-gradient(180deg,#eef2ff 0%, #f8fbff 50%);
+            margin:0;
+            padding:40px 20px;
+            color:#0f1724;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        .wrap{
+            max-width:1000px;
+            margin:0 auto;
+            display:block;
+        }
+
+        .card{
+            background: var(--card);
+            border-radius:14px;
+            padding:28px;
+            box-shadow: 0 8px 30px rgba(18,25,40,0.06);
+            margin-bottom:20px;
+        }
+
+        header{
+            display:flex;
+            gap:20px;
+            align-items:center;
+            justify-content:space-between;
+            flex-wrap:wrap;
+        }
+
+        .hero{
+            display:flex;
+            gap:20px;
+            align-items:center;
+        }
+
+        .avatar{
+            width:88px;height:88px;border-radius:50%;
+            background:linear-gradient(135deg,var(--accent),#00b7ff);
+            display:flex;align-items:center;justify-content:center;
+            color:white;font-weight:800;font-size:28px;flex:0 0 88px;
+            box-shadow:0 6px 18px rgba(34,84,255,0.18);
+        }
+
+        h1{margin:0;font-size:24px;letter-spacing:0.6px}
+        .sub{color:var(--muted);font-size:14px;margin-top:6px}
+
+        .links a{color:var(--accent);text-decoration:none;margin-right:12px}
+
+        .meta{display:flex;gap:12px;align-items:center;font-size:14px;color:var(--muted);flex-wrap:wrap}
+
+        h2{margin:0 0 12px 0;font-size:18px}
+
+        .grid{
+            display:grid;
+            grid-template-columns:1fr 320px;
+            gap:20px;
+        }
+
+        .skills .badges{display:flex;flex-wrap:wrap;gap:8px}
+        .badge{background:#f1f6ff;color:#0b2a66;padding:6px 10px;border-radius:999px;font-size:13px}
+
+        .project-card{border-radius:10px;padding:14px;background:linear-gradient(180deg, rgba(34,84,255,0.03), transparent);border:1px solid rgba(34,84,255,0.06);transition:transform .22s ease, box-shadow .22s ease}
+        .project-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(16,24,40,0.08)}
+
+        ul{margin:8px 0 0 18px}
+
+        footer{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
+
+        .theme-toggle{background:transparent;border:1px solid rgba(12,20,40,0.06);padding:8px 12px;border-radius:999px;cursor:pointer}
+
+        /* responsive */
+        @media (max-width:900px){
+            .grid{grid-template-columns:1fr}
+            .meta{width:100%}
+        }
+
+        /* dark theme */
+        body.dark{background:linear-gradient(180deg,#0b1220 0%, #071025 60%);color:#d7e6ff}
+        body.dark .card{background:rgba(6,10,21,0.6);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+        body.dark .badge{background:#0f1b3a;color:#9fc7ff}
+        body.dark .avatar{box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+        body.dark a{color:#8fb6ff}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="card">
+        <header>
+            <div class="hero">
+                <div class="avatar">AK</div>
+                <div>
+                    <h1>Abhishek Kumar</h1>
+                    <div class="sub">B.Tech CSE (2024–28) — Chandigarh University</div>
+                    <div class="meta" style="margin-top:10px">
+                        <div>Ludhiana, Punjab</div>
+                        <div>•</div>
+                        <div>+91‑79863‑09349</div>
+                        <div>•</div>
+                        <div><a href="mailto:abhishekzz966@gmail.com">abhishekzz966@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:12px;margin-left:auto">
+                <div class="links">
+                    <a href="https://linkedin.com/in/abhishek-kumar-871405334" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/abhishekzz966" target="_blank">GitHub</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+            </div>
+        </header>
+    </div>
+
+    <div class="grid">
+        <main class="card">
+            <section>
+                <h2>Professional Summary</h2>
+                <p>
+                    B.Tech CS student with practical ML and multimodal AI project experience. Built an AI Image–Text Trust Scoring System using CLIP, PyTorch, and MLP fusion. Placed 3rd nationally at CODE ESCAPE and awarded at TATVAS Hackathon. Patent published by Government of India (Jul 2025).
+                </p>
+            </section>
+
+            <section style="margin-top:16px">
+                <h2>Projects</h2>
+
+                <div class="project-card" style="margin-bottom:12px">
+                    <h3 style="margin:0">AI Image–Text Trust Scoring System</h3>
+                    <div style="color:var(--muted);font-size:13px;margin:6px 0"><strong>Da Vinci Hackathon</strong> • 2024–2025</div>
+                    <ul>
+                        <li>Multimodal system detecting synthetic image–text pairs using frozen CLIP and PyTorch.</li>
+                        <li>Trained on MiRAGeNews (15,000 samples) and built a 5‑dim multimodal fusion vector.</li>
+                        <li>Designed a human‑readable Trust Score (0–100) and a Gradio demo for live testing.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <h3 style="margin:0">Student Result & Analytics System</h3>
+                    <div style="color:var(--muted);font-size:13px;margin:6px 0"><strong>Academic Project</strong> • 2024</div>
+                    <ul>
+                        <li>Designed a MySQL schema in 3NF; automated reports with Pandas.</li>
+                        <li>Implemented complex queries for ranking and performance analysis.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section style="margin-top:16px">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>Patent published — Tap‑Mounted Utensil Drying Apparatus (Jul 2025).</li>
+                    <li>3rd place at CODE ESCAPE national quiz; multiple hackathon recognitions.</li>
+                </ul>
+            </section>
+
+            <section style="margin-top:16px">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Python in Data Analytics — <a href="https://coursera.org/share/a790dc77920c84d7bf155f4d2d6ac77f" target="_blank">Certificate</a></li>
+                    <li>Python in Databases — <a href="https://coursera.org/share/347ea5e72068bd215aecdeed834a1eb0" target="_blank">Certificate</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <aside>
+            <div class="card">
+                <section class="skills">
+                    <h2>Technical Skills</h2>
+                    <div class="badges" style="margin-top:10px">
+                        <span class="badge">PyTorch</span>
+                        <span class="badge">CLIP</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">Pandas</span>
+                        <span class="badge">NumPy</span>
+                        <span class="badge">MySQL</span>
+                        <span class="badge">FastAPI</span>
+                        <span class="badge">Gradio</span>
+                    </div>
+                </section>
+
+                <section style="margin-top:16px">
+                    <h2>Education</h2>
+                    <div style="color:var(--muted);font-size:14px"><strong>B.Tech — Computer Science & Engineering</strong></div>
+                    <div style="font-size:13px;margin-top:6px">Chandigarh University | 2024 – 2028</div>
+                    <div style="margin-top:8px;font-size:13px;color:var(--muted)">Class XII: 83% • Class X: 69%</div>
+                </section>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+                <h2>Extracurricular</h2>
+                <ul>
+                    <li>Led Young Orators Club; trained public speaking.</li>
+                    <li>Competed in national hackathons and quizzes.</li>
+                    <li>Interests: Trustworthy AI, multimodal systems, design.</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="card" style="text-align:center;font-size:13px">Made with care • <a href="https://github.com/abhishekzz966" target="_blank">GitHub</a></div>
+    </footer>
+</div>
+
+<script>
+    const btn = document.getElementById('themeToggle');
+    const isDark = localStorage.getItem('theme') === 'dark';
+    if(isDark) document.body.classList.add('dark');
+    btn.addEventListener('click', ()=>{
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+</script>
+</body>
+</html>
